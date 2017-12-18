@@ -1,0 +1,141 @@
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
+.clearfix {
+	height: 40px;
+	width: 100%;
+	background: orange;
+	font-size: 11pt;
+	font-family: 'PT Sans', Arial, sans-serif;
+	font-weight: bold;
+	position: relative;
+	border-bottom: 2px solid #283744;
+    *zoom: 1;
+	position:fixed;
+	 z-index: 11;
+}
+ul#clearfix1{
+	padding: 0;
+	margin: 0 auto;
+	width: 600px;
+	height: 40px;
+}
+li#poi{
+	display: inline;
+	float: left;
+	
+}
+a#lop{
+	color: #fff;
+	display: inline-block;
+	width: 100px;
+	text-align: center;
+	text-decoration: none;
+	line-height: 40px;
+	text-shadow: 1px 1px 0px #283744;
+		border-right: 1px solid #576979;
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+}
+div a#pull {
+	color: #fff;
+	display: inline-block;
+	width: 100px;
+	text-align: center;
+	text-decoration: none;
+	line-height: 40px;
+	text-shadow: 1px 1px 0px #283744;
+	display: none;
+}
+
+
+/* Стили для экранов 600px и меньше */
+@media screen and (max-width: 600px) {
+	.clearfix{ 
+  		height: auto;
+  	}
+  	ul#clearfix1 {
+  		width: 100%;
+  		display: none;
+  		height: auto;
+  	}
+  	li#poi{
+  		width: 50%;
+  		float: left;
+  		position: relative;
+  	}
+  	a#lop{
+		border-bottom: 1px solid #576979;
+		border-right: 1px solid #576979;
+	  	text-align: left;
+	  	width: 100%;
+	  	text-indent: 25px;
+  	}
+	div a#pull {
+		display:inline-block;
+		background-color: #283744;
+		width: 100%;
+		height:40px;
+		position: absolute;
+		
+	}
+	div a#pull:after {
+		content:"";
+		background: no-repeat;
+		width: 30px;
+		height: 40px;
+		display: inline-block;
+		position: fixed;
+		right: 15px;
+		top: 10px;
+	}
+}
+
+/*Стили для экранов 515px и меньше*/
+@media only screen and (max-width : 480px) {
+	.clearfix {
+		border-bottom: 0;
+	}
+	ul#clearfix1 {
+		display: none;
+		height: auto;
+	}
+	div a#pull {
+		display:inline-block;
+		background-color: #283744;
+		width: 100%;
+		height:40px;
+		position: relative;
+		
+	}
+	div a#pull:after {
+		content:"";
+		background: no-repeat;
+		width: 30px;
+		height: 40px;
+		display: inline-block;
+		position: absolute;
+		right: 15px;
+		top: 10px;
+	}
+	
+	
+}
+
+/* Смартфоны */
+@media only screen and (max-width : 320px) {
+	li#poi{
+		display: block;
+		float: none;
+		width: 100%;
+	}
+	a#lop {
+		border-bottom: 1px solid #576979;
+	}
+}
